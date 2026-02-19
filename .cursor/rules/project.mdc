@@ -1,0 +1,28 @@
+---
+description: プロジェクト全体のガイダンス（.claude/CLAUDE.md の Cursor 版）
+alwaysApply: true
+---
+
+# プロジェクトルール
+
+このファイルは、リポジトリで作業する際に Cursor へのガイダンスを提供します（Claude Code 用の `.claude/CLAUDE.md` に相当）。
+
+## 言語設定
+
+- 入出力（ユーザーとのやり取り）は日本語で行う
+
+## プロジェクト概要
+
+TDD（テスト駆動開発）で FizzBuzz を実装するプロジェクトです。
+
+- **Java** … `java/` — Maven（`./mvnw`）。依存キャッシュは `m2repo/`
+- **Swift** … `swift/` — Swift Package Manager（`swift test`, `swift run FizzBuzzApp`）
+- **Kotlin** … `kotlin/` — Gradle（`./gradlew`）。キャッシュは `gradle-user-home/`
+- **Python** … `python/` — pytest（`pip install -e ".[dev]"` のあと `pytest`, `python -m fizzbuzz`）
+
+各言語のビルド・テスト・Docker のコマンドはルートの `README.md` および各フォルダの `README.md` に記載しています。
+
+## 作業時のメモ
+
+- コード変更時は、該当言語のテストが通ることを確認する
+- 共通仕様: `of(n)` が 3 の倍数で "Fizz"、5 の倍数で "Buzz"、両方で "FizzBuzz"、それ以外は数を文字列で返す（現状は「そのまま数」のベースのみ）

@@ -19,6 +19,15 @@ m2repo/
 gradle-user-home/
 build/
 
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+coverage/
+.pnpm-store/
+
 # Python
 __pycache__/
 *.py[cod]

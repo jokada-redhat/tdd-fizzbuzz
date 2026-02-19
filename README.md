@@ -12,6 +12,7 @@ TDD（テスト駆動開発）の練習として FizzBuzz を実装するプロ�
 | Swift  | `swift/`   | Swift Package Manager |
 | Kotlin | `kotlin/`  | Gradle         |
 | Python | `python/`  | pytest         |
+| Node.js| `node/`    | npm (node --test) |
 
 ### Java
 
@@ -72,4 +73,19 @@ Docker（Python 未導入時、リポジトリルートで。キャッシュは 
 ```bash
 docker run --rm -v "$(pwd)/python:/app" -w /app -e PIP_CACHE_DIR=/app/.pip-cache python:3.12 bash -c "pip install -q -e '.[dev]' && pytest"
 docker run --rm -v "$(pwd)/python:/app" -w /app -e PIP_CACHE_DIR=/app/.pip-cache python:3.12 bash -c "pip install -q -e '.[dev]' && python -m fizzbuzz"
+```
+
+### Node.js
+
+```bash
+cd node
+npm test     # テスト
+npm start    # 1〜100 を表示
+```
+
+Docker（Node 未導入時、リポジトリルートで）:
+
+```bash
+docker run --rm -v "$(pwd)/node:/app" -w /app node:22 npm test
+docker run --rm -v "$(pwd)/node:/app" -w /app node:22 npm start
 ```

@@ -1,0 +1,14 @@
+{
+  "name": "fizzbuzz-node",
+  "version": "1.0.0",
+  "description": "FizzBuzz problem implementation in Node.js (TDD)",
+  "type": "module",
+  "main": "src/fizzbuzz.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/cli.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

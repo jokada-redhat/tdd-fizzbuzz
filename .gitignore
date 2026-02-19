@@ -1,1 +1,33 @@
+# Java / Maven
 target/
+m2repo/
+*.class
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+# .mvn のうちラッパー以外（キャッシュ等）は無視。only-script なので jar は含まれない
+.mvn/*
+!**/.mvn/wrapper/
+!**/.mvn/wrapper/maven-wrapper.properties
+!**/.mvn/maven.config
+
+# Swift
+.build/
+.swiftpm/
+
+# Kotlin / Gradle
+.gradle/
+gradle-user-home/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+.eggs/
+dist/
+*.egg-info/
+*.egg
+.pytest_cache/
+.pip-cache/
+venv/
+.venv/
+.env/
